@@ -57,8 +57,22 @@ void pstr(stack_t **structstack, unsigned int lineno)
  */
 void rotl(stack_t **structstack, unsigned int lineno)
 {
-	(void) structstack;
+	stack_t *top = *structstack, *temp = *structstack;
 	(void) lineno;
+
+	while (temp)
+	{
+		if (!temp->next)
+		{
+			temp->next = top;
+			top->prev = temp;
+			*structstack = top->next;
+			top->next = NULL;
+			(*structstack)->prev = NULL;
+			break;
+		}
+		temp = temp->next;
+	}
 }
 
 /**
@@ -70,6 +84,20 @@ void rotl(stack_t **structstack, unsigned int lineno)
  */
 void rotr(stack_t **structstack, unsigned int lineno)
 {
-	(void) structstack;
+	stack_t *top = *structstack, *temp = *structstack;
 	(void) lineno;
+
+	while (temp)
+	{
+		if (!temp->next)
+		{
+			temp->next = top;
+			top->prev = temp;
+			temp->prev->next = NULL;
+			temp->prev = NULL;
+			*structstack = temp;
+			break;
+		}
+		temp = temp->next;
+	}
 }
