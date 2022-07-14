@@ -10,7 +10,7 @@
 #include <unistd.h>
 #include <errno.h>
 #include <string.h>
-extern int num;
+extern int num[2];
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)

@@ -53,7 +53,7 @@ void checknumber(char *n, unsigned int lineno)
 			exit(EXIT_FAILURE);
 		}
 	}
-	num = atoi(n);
+	num[1] = atoi(n);
 }
 /**
  * choose_operand - choose right op to use
@@ -83,7 +83,10 @@ void (*choose_operand(char *code))(stack_t **stack, unsigned int linenumber)
 
 	if (code[0] == '#')
 		return (comS);
-
+	if (strcmp(code, "stack") == 0)
+		num[0] = 0;
+	if (strcmp(code, "queue") == 0)
+		num[0] = 1;
 	for (i = 0; opcodes[i].opcode != NULL; i++)
 		if (strcmp(code, opcodes[i].opcode) == 0)
 			return (opcodes[i].f);

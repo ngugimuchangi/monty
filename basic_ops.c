@@ -1,6 +1,6 @@
 #include "monty.h"
 
-int num;
+int num[2];
 
 /**
  * pushstack- inserts a value to stack
@@ -16,7 +16,7 @@ void pushstack(stack_t **structstack, unsigned int lineno)
 
 	if (newnode == NULL)
 		return;
-	newnode->n = num;
+	newnode->n = num [1];
 	newnode->prev = NULL;
 	newnode->next = NULL;
 	if (*structstack != NULL)
