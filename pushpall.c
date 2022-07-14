@@ -13,7 +13,6 @@ void pushstack(stack_t **structstack, unsigned int lineno)
 {
 	stack_t *newnode = malloc(sizeof(stack_t));
 	(void) lineno;
-	
 
 	if (newnode == NULL)
 		return;
