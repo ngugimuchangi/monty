@@ -21,7 +21,8 @@ void pchar(stack_t **structstack, unsigned int lineno)
 		fprintf(stderr, "L%u: can't pchar, value out of range\n", lineno);
 		exit(EXIT_FAILURE);
 	}
-	printf("%c\n", temp->n);
+	if (temp->n >= 32 && temp->n <= 127)
+		printf("%c\n", temp->n);
 }
 
 /**
@@ -40,14 +41,15 @@ void pstr(stack_t **structstack, unsigned int lineno)
 	{
 		if (temp->n <= 0 || temp->n > 255)
 			break;
-		printf("%c", temp->n);
+		if (temp->n >= 32 && temp->n <= 127)
+			printf("%c", temp->n);
 		temp = temp->next;
 	}
 	printf("\n");
 }
 
 /**
- * pstr - prints all numbers in stack as ASCII characters
+ * rotl - moves top stack element to to the bottom
  * @structstack: address of the first node
  * @lineno: line number
  *
@@ -60,7 +62,7 @@ void rotl(stack_t **structstack, unsigned int lineno)
 }
 
 /**
- * pstr - prints all numbers in stack as ASCII characters
+ * rotr - moves bottom stack element to the top
  * @structstack: address of the first node
  * @lineno: line number
  *
