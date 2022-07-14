@@ -57,6 +57,11 @@ void divstack(stack_t **structstack, unsigned int lineno)
 		fprintf(stderr, "L%u: can't div, stack too short\n", lineno);
 		exit(EXIT_FAILURE);
 	}
+	if (current->n == 0)
+	{
+		fprintf(stderr, "L%u: division by zero\n", lineno);
+		exit(EXIT_FAILURE);
+	}
 	next = current->next;
 	next->n /= current->n;
 	popstack(structstack, lineno);
@@ -97,6 +102,11 @@ void modstack(stack_t **structstack, unsigned int lineno)
 	if (!current || !current->next)
 	{
 		fprintf(stderr, "L%u: can't mod, stack too short\n", lineno);
+		exit(EXIT_FAILURE);
+	}
+	if (current->n == 0)
+	{
+		fprintf(stderr, "L%u: division by zero\n", lineno);
 		exit(EXIT_FAILURE);
 	}
 	next = current->next;
