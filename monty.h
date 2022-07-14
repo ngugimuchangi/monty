@@ -49,6 +49,10 @@ void comS(stack_t **structstack, unsigned int lineno);
 void popstack(stack_t **structstack, unsigned int lineno);
 void swapstack(stack_t **structstack, unsigned int lineno);
 void addstack(stack_t **structstack, unsigned int lineno);
+void substack(stack_t **structstack, unsigned int lineno);
+void divstack(stack_t **structstack, unsigned int lineno);
+void mulstack(stack_t **structstack, unsigned int lineno);
+void modstack(stack_t **structstack, unsigned int lineno);
 
 void dellineno(char **buf);
 void tokenizer(char **buf, char ***tokens);

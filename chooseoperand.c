@@ -69,8 +69,12 @@ void (*choose_operand(char *code))(stack_t **stack, unsigned int linenumber)
 		{"pint", peekstack},
 		{"pop", popstack},
 		{"swap", swapstack},
-		{"add", addstack},
 		{"nop", comS},
+		{"add", addstack},
+		{"sub", substack},
+		{"div", divstack},
+		{"mul", mulstack},
+		{"mod", modstack},
 		{NULL, NULL}};
 
 	if (code[0] == '#')
