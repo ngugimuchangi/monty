@@ -16,7 +16,7 @@ void pushstack(stack_t **structstack, unsigned int lineno)
 
 	if (newnode == NULL)
 		return;
-	newnode->n = num [1];
+	newnode->n = num[1];
 	newnode->prev = NULL;
 	newnode->next = NULL;
 	if (*structstack != NULL)
