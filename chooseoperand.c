@@ -75,6 +75,10 @@ void (*choose_operand(char *code))(stack_t **stack, unsigned int linenumber)
 		{"div", divstack},
 		{"mul", mulstack},
 		{"mod", modstack},
+		{"pchar", pchar},
+		{"pstr", pstr},
+		{"rotl", rotl},
+		{"rotr", rotr},
 		{NULL, NULL}};
 
 	if (code[0] == '#')

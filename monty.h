@@ -53,6 +53,10 @@ void substack(stack_t **structstack, unsigned int lineno);
 void divstack(stack_t **structstack, unsigned int lineno);
 void mulstack(stack_t **structstack, unsigned int lineno);
 void modstack(stack_t **structstack, unsigned int lineno);
+void pchar(stack_t **structstack, unsigned int lineno);
+void pstr(stack_t **structstack, unsigned int lineno);
+void rotl(stack_t **structstack, unsigned int lineno);
+void rotr(stack_t **structstack, unsigned int lineno);
 
 void dellineno(char **buf);
 void tokenizer(char **buf, char ***tokens);
