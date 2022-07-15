@@ -10,8 +10,8 @@
 #include <unistd.h>
 #include <errno.h>
 #include <string.h>
-extern int num[2];
 
+extern int num[2];
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -57,6 +57,8 @@ void pchar(stack_t **structstack, unsigned int lineno);
 void pstr(stack_t **structstack, unsigned int lineno);
 void rotl(stack_t **structstack, unsigned int lineno);
 void rotr(stack_t **structstack, unsigned int lineno);
+void stack(stack_t **structstack, unsigned int lineno);
+void queue(stack_t **structstack, unsigned int lineno);
 
 void dellineno(char **buf);
 void tokenizer(char **buf, char ***tokens);

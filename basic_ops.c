@@ -11,7 +11,7 @@ int num[2];
 
 void pushstack(stack_t **structstack, unsigned int lineno)
 {
-	stack_t *newnode = malloc(sizeof(stack_t));
+	stack_t *temp, *newnode = malloc(sizeof(stack_t));
 	(void) lineno;
 
 	if (newnode == NULL)
@@ -21,8 +21,25 @@ void pushstack(stack_t **structstack, unsigned int lineno)
 	newnode->next = NULL;
 	if (*structstack != NULL)
 	{
-		newnode->next = *structstack;
-		(*structstack)->prev = newnode;
+		temp = *structstack;
+		if (num[0] == 1)
+		{
+			while (temp)
+			{
+				if (temp->next == NULL)
+				{
+					temp->next = newnode;
+					newnode->prev = temp;
+					return;
+				}
+				temp = temp->next;
+			}
+		}
+		else
+		{
+			newnode->next = *structstack;
+			(*structstack)->prev = newnode;
+		}
 	}
 	*structstack = newnode;
 }

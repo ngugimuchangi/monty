@@ -84,9 +84,9 @@ void (*choose_operand(char *code))(stack_t **stack, unsigned int linenumber)
 	if (code[0] == '#')
 		return (comS);
 	if (strcmp(code, "stack") == 0)
-		num[0] = 0;
+		return (stack);
 	if (strcmp(code, "queue") == 0)
-		num[0] = 1;
+		return (queue);
 	for (i = 0; opcodes[i].opcode != NULL; i++)
 		if (strcmp(code, opcodes[i].opcode) == 0)
 			return (opcodes[i].f);
