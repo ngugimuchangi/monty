@@ -6,7 +6,7 @@
 >> where file is the path to the file containing Monty byte code
 > Desciption: Interprets Monty byte codes
 
-## Brainf\*ck
+### Brainf\*ck
 Brainf\*ck scripts for:
 - printing ASCII characters
 - addition user input
