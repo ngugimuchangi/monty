@@ -11,3 +11,4 @@
 > - printing ASCII characters
 > - adding numbers from user input
 > - multiplying numbers from user input
+performing push and pall functions
