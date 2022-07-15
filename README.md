@@ -8,6 +8,6 @@ The monty program
 
 ## Brainf\*ck
 > Brainf\*ck scripts for:
->> - printing ASCII characters
->> - addition user input
->> - multiplying user input
+	- printing ASCII characters
+	- addition user input
+	- multiplying user input
