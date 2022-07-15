@@ -2,12 +2,12 @@
 
 ## Monty Project
 ### The monty program
-Usage: monty file
+**Usage:** monty file
 - where file is the path to the file containing Monty byte code
 Desciption: Interprets Monty byte codes
 
 ### Brainf\*ck
 Brainf\*ck scripts for:
 - printing ASCII characters
-- addition user input
-- multiplying user input
+- adding numbers from user input
+- multiplying numbers from user input
