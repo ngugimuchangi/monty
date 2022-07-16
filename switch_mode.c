@@ -14,7 +14,7 @@ void stack(stack_t **structstack, unsigned int lineno)
 }
 
 /**
- * queue - switch data format to stack
+ * queue - switch data format to queue
  * @structstack: address of first node
  * @lineno: line number
  *
